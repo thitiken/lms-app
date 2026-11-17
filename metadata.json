@@ -1,0 +1,6 @@
+{
+  "name": "EcoLab Studio — วิเคราะห์สถานการณ์ปัญหาสิ่งแวดล้อม",
+  "description": "แพลตฟอร์มการเรียนรู้แบบร่วมมือสำหรับการวิเคราะห์สถานการณ์ปัญหาสิ่งแวดล้อม 1 สถานการณ์ตัวอย่าง และ 5 สถานการณ์ระดับโลก 10 กลุ่ม พร้อม Ideation Canvas, Prompt V.1–V.2, วิเคราะห์มนุษย์กับ AI และนำเข้า Vercel",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,244 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global Safety Net: Default-deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // --- Shared Hardened Primitives ---
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedEmailUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return isVerifiedEmailUser() && (
+        request.auth.token.email == 'thitiwat@psc.ac.th' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isOwner(uid) {
+      return isVerifiedEmailUser() && request.auth.uid == uid;
+    }
+
+    // --- Validation Blueprints ---
+    function isValidAdminUser(data, uid) {
+      return data.keys().hasAll(['uid', 'email', 'displayName', 'createdAt'])
+        && data.keys().hasOnly(['uid', 'email', 'displayName', 'createdAt'])
+        && data.uid is string && data.uid == uid && data.uid.size() <= 128
+        && data.email is string && data.email.size() >= 3 && data.email.size() <= 120
+        && data.displayName is string && data.displayName.size() >= 1 && data.displayName.size() <= 80
+        && data.createdAt is timestamp;
+    }
+
+    function isValidStudentProfile(data, uid) {
+      return data.keys().hasAll(['uid', 'studentCode', 'displayName', 'groupId', 'role', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['uid', 'studentCode', 'displayName', 'groupId', 'role', 'createdAt', 'updatedAt'])
+        && data.uid is string && data.uid == uid && data.uid.size() <= 128
+        && data.studentCode is string && data.studentCode.size() >= 1 && data.studentCode.size() <= 32 && data.studentCode.matches('^[a-zA-Z0-9_\\-]+$')
+        && data.displayName is string && data.displayName.size() >= 1 && data.displayName.size() <= 80
+        && data.groupId is number && data.groupId >= 1 && data.groupId <= 10
+        && data.role == 'student'
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidClassRosterEntry(data, code) {
+      return data.keys().hasAll(['studentCode', 'studentName', 'groupId', 'active', 'joinedAt'])
+        && data.keys().hasOnly(['studentCode', 'studentName', 'groupId', 'active', 'joinedAt'])
+        && data.studentCode is string && data.studentCode == code && data.studentCode.size() >= 1 && data.studentCode.size() <= 32 && data.studentCode.matches('^[A-Z0-9_\\-]+$')
+        && data.studentName is string && data.studentName.size() >= 1 && data.studentName.size() <= 80
+        && data.groupId is number && data.groupId >= 1 && data.groupId <= 10
+        && data.active is bool
+        && data.joinedAt is timestamp;
+    }
+
+    function isValidStudentScore(data, code) {
+      return data.keys().hasAll([
+          'studentCode', 'studentName', 'groupId', 'active',
+          'canvasScore', 'promptV1Score', 'peerReviewScore', 'promptV2Score', 'vercelScore',
+          'bonusScore', 'totalScore', 'teacherNote', 'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'studentCode', 'studentName', 'groupId', 'linkedUid', 'active',
+          'canvasScore', 'promptV1Score', 'peerReviewScore', 'promptV2Score', 'vercelScore',
+          'bonusScore', 'totalScore', 'teacherNote', 'updatedAt'
+        ])
+        && data.studentCode is string && data.studentCode == code && data.studentCode.size() >= 1 && data.studentCode.size() <= 32
+        && data.studentName is string && data.studentName.size() >= 1 && data.studentName.size() <= 80
+        && data.groupId is number && data.groupId >= 1 && data.groupId <= 10
+        && (!('linkedUid' in data) || (data.linkedUid is string && data.linkedUid.size() <= 128))
+        && data.active is bool
+        && data.canvasScore is number && data.canvasScore >= 0 && data.canvasScore <= 20
+        && data.promptV1Score is number && data.promptV1Score >= 0 && data.promptV1Score <= 20
+        && data.peerReviewScore is number && data.peerReviewScore >= 0 && data.peerReviewScore <= 15
+        && data.promptV2Score is number && data.promptV2Score >= 0 && data.promptV2Score <= 25
+        && data.vercelScore is number && data.vercelScore >= 0 && data.vercelScore <= 20
+        && data.bonusScore is number && data.bonusScore >= 0 && data.bonusScore <= 20
+        && data.totalScore is number && data.totalScore >= 0 && data.totalScore <= 120
+        && data.teacherNote is string && data.teacherNote.size() <= 500
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidTimelineEvent(data, eventId) {
+      return data.keys().hasAll(['id', 'actorUid', 'studentCode', 'actorName', 'groupId', 'phaseId', 'actionType', 'summary', 'createdAt'])
+        && data.keys().hasOnly(['id', 'actorUid', 'studentCode', 'actorName', 'groupId', 'phaseId', 'actionType', 'summary', 'createdAt'])
+        && data.id is string && data.id == eventId && data.id.size() <= 128
+        && data.actorUid is string && data.actorUid.size() >= 1 && data.actorUid.size() <= 128
+        && data.studentCode is string && data.studentCode.size() >= 1 && data.studentCode.size() <= 32
+        && data.actorName is string && data.actorName.size() >= 1 && data.actorName.size() <= 80
+        && data.groupId is number && data.groupId >= 0 && data.groupId <= 10
+        && data.phaseId in ['step1', 'step2', 'step3', 'step4', 'step5', 'step6']
+        && data.actionType is string && data.actionType.size() >= 1 && data.actionType.size() <= 60
+        && data.summary is string && data.summary.size() >= 1 && data.summary.size() <= 400
+        && data.createdAt is timestamp;
+    }
+
+    function isValidTeacherControl(data, controlId) {
+      return data.keys().hasAll(['controlId', 'announcement', 'lockedPhases', 'allowStudentScoreView', 'updatedByUid', 'updatedAt'])
+        && data.keys().hasOnly(['controlId', 'announcement', 'lockedPhases', 'allowStudentScoreView', 'updatedByUid', 'updatedAt'])
+        && data.controlId is string && data.controlId == controlId && data.controlId.size() <= 64
+        && data.announcement is string && data.announcement.size() <= 500
+        && data.lockedPhases is list && data.lockedPhases.size() <= 6
+        && (data.lockedPhases.size() == 0 || data.lockedPhases[0] is string)
+        && data.allowStudentScoreView is bool
+        && data.updatedByUid is string && data.updatedByUid.size() >= 1 && data.updatedByUid.size() <= 128
+        && data.updatedAt is timestamp;
+    }
+
+    // --- Collection Rules ---
+
+    // Health check test doc (read-only for startup testConnection)
+    match /test/connection {
+      allow get: if true;
+      allow list, write: if false;
+    }
+
+    // Admin registry (Teacher only)
+    match /admins/{uid} {
+      allow get: if isValidId(uid) && (isOwner(uid) || isAdmin());
+      allow list: if isAdmin();
+      allow create: if isValidId(uid) && isAdmin() && isValidAdminUser(incoming(), uid) && incoming().createdAt == request.time;
+      allow update: if isValidId(uid) && isAdmin() && isValidAdminUser(incoming(), uid)
+        && incoming().uid == existing().uid
+        && incoming().createdAt == existing().createdAt
+        && incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'email']);
+      allow delete: if isValidId(uid) && isAdmin();
+    }
+
+    // Private student profile (Owner or Teacher)
+    match /studentProfiles/{uid} {
+      allow get: if isValidId(uid) && (isOwner(uid) || isAdmin());
+      allow list: if isAdmin() || (isVerifiedEmailUser() && resource.data.uid == request.auth.uid);
+      allow create: if isValidId(uid)
+        && isOwner(uid)
+        && isValidStudentProfile(incoming(), uid)
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidId(uid)
+        && (isOwner(uid) || isAdmin())
+        && isValidStudentProfile(incoming(), uid)
+        && incoming().uid == existing().uid
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'studentCode', 'groupId', 'updatedAt']);
+      allow delete: if isValidId(uid) && isAdmin();
+    }
+
+    // Shared Classroom Roster Check-in (synced across dev & shared app instances; zero PII, zero scores)
+    match /classRoster/{studentCode} {
+      allow get: if isValidId(studentCode);
+      allow list: if isAdmin() || (resource.data.active == true && resource.data.groupId >= 1 && resource.data.groupId <= 10);
+      allow create: if isValidId(studentCode)
+        && isValidClassRosterEntry(incoming(), studentCode)
+        && incoming().active == true
+        && incoming().joinedAt == request.time;
+      allow update: if isValidId(studentCode)
+        && isValidClassRosterEntry(incoming(), studentCode)
+        && incoming().studentCode == existing().studentCode
+        && incoming().joinedAt == request.time
+        && (
+          isAdmin() ||
+          (existing().active == true
+            && incoming().active == true
+            && incoming().diff(existing()).affectedKeys().hasOnly(['studentName', 'groupId', 'joinedAt']))
+        );
+      allow delete: if isValidId(studentCode) && isAdmin();
+    }
+
+    // Student Scores & Access Codes (Teacher-controlled writes; Owner or Teacher reads)
+    match /studentScores/{studentCode} {
+      allow get: if isValidId(studentCode) && (
+        isAdmin() ||
+        (isVerifiedEmailUser() && resource.data.linkedUid == request.auth.uid)
+      );
+      allow list: if isAdmin() || (isVerifiedEmailUser() && resource.data.linkedUid == request.auth.uid);
+      allow create: if isValidId(studentCode)
+        && isAdmin()
+        && isValidStudentScore(incoming(), studentCode)
+        && incoming().updatedAt == request.time;
+      allow update: if isValidId(studentCode)
+        && isValidStudentScore(incoming(), studentCode)
+        && incoming().studentCode == existing().studentCode
+        && incoming().updatedAt == request.time
+        && (
+          isAdmin() ||
+          (isVerifiedEmailUser()
+            && existing().active == true
+            && !('linkedUid' in existing())
+            && incoming().linkedUid == request.auth.uid
+            && incoming().diff(existing()).affectedKeys().hasOnly(['linkedUid', 'updatedAt']))
+        );
+      allow delete: if isValidId(studentCode) && isAdmin();
+    }
+
+    // Student Activity Timeline
+    match /activityTimeline/{eventId} {
+      allow get: if isValidId(eventId) && (isAdmin() || (isVerifiedEmailUser() && resource.data.actorUid == request.auth.uid));
+      allow list: if isAdmin() || (isVerifiedEmailUser() && resource.data.actorUid == request.auth.uid);
+      allow create: if isValidId(eventId)
+        && isVerifiedEmailUser()
+        && isValidTimelineEvent(incoming(), eventId)
+        && incoming().actorUid == request.auth.uid
+        && incoming().createdAt == request.time;
+      allow update: if false;
+      allow delete: if isValidId(eventId) && isAdmin();
+    }
+
+    // Teacher Classroom Controls (Teacher-only writes; Signed-in users can read lock states)
+    match /teacherControls/{controlId} {
+      allow get: if isValidId(controlId) && isVerifiedEmailUser();
+      allow list: if isAdmin();
+      allow create: if isValidId(controlId)
+        && isAdmin()
+        && isValidTeacherControl(incoming(), controlId)
+        && incoming().updatedByUid == request.auth.uid
+        && incoming().updatedAt == request.time;
+      allow update: if isValidId(controlId)
+        && isAdmin()
+        && isValidTeacherControl(incoming(), controlId)
+        && incoming().controlId == existing().controlId
+        && incoming().updatedByUid == request.auth.uid
+        && incoming().updatedAt == request.time
+        && incoming().diff(existing()).affectedKeys().hasOnly(['announcement', 'lockedPhases', 'allowStudentScoreView', 'updatedByUid', 'updatedAt']);
+      allow delete: if isValidId(controlId) && isAdmin();
+    }
+  }
+}

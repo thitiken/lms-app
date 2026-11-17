@@ -1,0 +1,861 @@
+{
+  "example": {
+    "canvaLink": "",
+    "sandboxFeedbackNotes": [],
+    "canvas": {
+      "problemStatement": "",
+      "targetUser": "ครัวเรือนริมคลอง อาสาสมัครสิ่งแวดล้อม และเจ้าหน้าที่จัดเก็บขยะของเทศบาล",
+      "applicationIdea": "",
+      "coreFeatures": "",
+      "expectedImpact": ""
+    },
+    "updatedAt": 1794906478273,
+    "lastEditor": "Thitiwat T"
+  },
+  "groups": {
+    "1": {
+      "groupId": 1,
+      "groupName": "กลุ่มที่ 1",
+      "members": "",
+      "scenarioId": "nepal-landslide",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906618133,
+      "lastEditor": "Thitiwat T"
+    },
+    "2": {
+      "groupId": 2,
+      "groupName": "กลุ่มที่ 2",
+      "members": "",
+      "scenarioId": "nepal-landslide",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906370312,
+      "lastEditor": ""
+    },
+    "3": {
+      "groupId": 3,
+      "groupName": "กลุ่มที่ 3",
+      "members": "ทดสอบ นักเรียน (5)",
+      "scenarioId": "europe-elnino",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794908365331,
+      "lastEditor": ""
+    },
+    "4": {
+      "groupId": 4,
+      "groupName": "กลุ่มที่ 4",
+      "members": "",
+      "scenarioId": "europe-elnino",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906378159,
+      "lastEditor": ""
+    },
+    "5": {
+      "groupId": 5,
+      "groupName": "กลุ่มที่ 5",
+      "members": "",
+      "scenarioId": "north-chemical",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906382015,
+      "lastEditor": ""
+    },
+    "6": {
+      "groupId": 6,
+      "groupName": "กลุ่มที่ 6",
+      "members": "",
+      "scenarioId": "north-chemical",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906385895,
+      "lastEditor": ""
+    },
+    "7": {
+      "groupId": 7,
+      "groupName": "กลุ่มที่ 7",
+      "members": "",
+      "scenarioId": "invasive-species",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906396896,
+      "lastEditor": ""
+    },
+    "8": {
+      "groupId": 8,
+      "groupName": "กลุ่มที่ 8",
+      "members": "",
+      "scenarioId": "invasive-species",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906401618,
+      "lastEditor": ""
+    },
+    "9": {
+      "groupId": 9,
+      "groupName": "กลุ่มที่ 9",
+      "members": "",
+      "scenarioId": "urban-flood",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906405497,
+      "lastEditor": ""
+    },
+    "10": {
+      "groupId": 10,
+      "groupName": "กลุ่มที่ 10",
+      "members": "",
+      "scenarioId": "urban-flood",
+      "ideationNotes": [],
+      "canvas": {
+        "problemStatement": "",
+        "targetUser": "",
+        "applicationIdea": "",
+        "coreFeatures": "",
+        "expectedImpact": ""
+      },
+      "promptV1": "",
+      "v1AppUrl": "",
+      "humanVsAi": {
+        "humanStrengths": "",
+        "aiStrengths": "",
+        "verificationNeeds": "",
+        "ethicsAndContext": ""
+      },
+      "comments": [],
+      "promptV2": "",
+      "v2Improvements": "",
+      "v2AppUrl": "",
+      "vercelUrl": "",
+      "vercelPackageName": "",
+      "vercelUploadChecklist": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "reflection": {
+        "keyLearning": "",
+        "teamworkInsight": "",
+        "nextImprovement": ""
+      },
+      "updatedAt": 1794906409480,
+      "lastEditor": ""
+    }
+  },
+  "timer": {
+    "activePhase": "step4",
+    "durationSeconds": 300,
+    "remainingSeconds": 296,
+    "isRunning": false,
+    "lastUpdatedAt": 1794908191896
+  },
+  "studentScores": {
+    "5": {
+      "studentCode": "5",
+      "studentName": "ทดสอบ นักเรียน",
+      "groupId": 3,
+      "active": true,
+      "joined": true,
+      "canvasScore": 0,
+      "promptV1Score": 0,
+      "peerReviewScore": 0,
+      "promptV2Score": 0,
+      "vercelScore": 0,
+      "bonusScore": 0,
+      "totalScore": 0,
+      "teacherNote": "",
+      "updatedAt": 1794908365331
+    }
+  },
+  "timeline": [
+    {
+      "studentCode": "5",
+      "actorName": "ทดสอบ นักเรียน",
+      "groupId": 3,
+      "phaseId": "step4",
+      "actionType": "เข้ากลุ่มเรียน",
+      "summary": "ทดสอบ นักเรียน (รหัส 5) เข้าร่วมกลุ่มที่ 3",
+      "id": "tl-1794908365332-g7wg0",
+      "createdAt": 1794908365332
+    },
+    {
+      "studentCode": "TEACHER",
+      "actorName": "ครูผู้สอน",
+      "groupId": 0,
+      "phaseId": "step4",
+      "actionType": "เริ่มภารกิจขั้นที่ 4",
+      "summary": "ครูผู้สอนกดเริ่มกิจกรรมขั้นที่ 4 บน Timeline ส่วนบนของห้องเรียน",
+      "id": "tl-1794908187232-kp8yl",
+      "createdAt": 1794908187232
+    },
+    {
+      "studentCode": "TEACHER",
+      "actorName": "ครูผู้สอน",
+      "groupId": 0,
+      "phaseId": "step1",
+      "actionType": "เริ่มภารกิจขั้นที่ 1",
+      "summary": "ครูผู้สอนกดเริ่มกิจกรรมขั้นที่ 1 บน Timeline ส่วนบนของห้องเรียน",
+      "id": "tl-1794907464920-8rz3w",
+      "createdAt": 1794907464920
+    },
+    {
+      "studentCode": "TEACHER",
+      "actorName": "ครูผู้สอน",
+      "groupId": 0,
+      "phaseId": "step2",
+      "actionType": "เริ่มภารกิจขั้นที่ 2",
+      "summary": "ครูผู้สอนกดเริ่มกิจกรรมขั้นที่ 2 บน Timeline ส่วนบนของห้องเรียน",
+      "id": "tl-1794907460088-1264o",
+      "createdAt": 1794907460088
+    },
+    {
+      "studentCode": "TEACHER",
+      "actorName": "ครูผู้สอน",
+      "groupId": 0,
+      "phaseId": "step1",
+      "actionType": "เริ่มภารกิจขั้นที่ 1",
+      "summary": "ครูผู้สอนกดเริ่มกิจกรรมขั้นที่ 1 บน Timeline ส่วนบนของห้องเรียน",
+      "id": "tl-1794907413392-39dag",
+      "createdAt": 1794907413392
+    },
+    {
+      "studentCode": "TEACHER",
+      "actorName": "ครูผู้สอน",
+      "groupId": 0,
+      "phaseId": "step2",
+      "actionType": "เริ่มภารกิจขั้นที่ 2",
+      "summary": "ครูผู้สอนกดเริ่มกิจกรรมขั้นที่ 2 บน Timeline ส่วนบนของห้องเรียน",
+      "id": "tl-1794907412704-gbz45",
+      "createdAt": 1794907412704
+    },
+    {
+      "studentCode": "TEACHER",
+      "actorName": "Thitiwat T",
+      "groupId": 1,
+      "phaseId": "step3",
+      "actionType": "ออกแบบ Prompt V.1",
+      "summary": "สร้างและบันทึก Prompt V.1 ของกลุ่มที่ 1",
+      "id": "tl-1794906613482-l4nwp",
+      "createdAt": 1794906613482
+    },
+    {
+      "studentCode": "6730",
+      "actorName": "ครูผู้สอน",
+      "groupId": 10,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6730 (รหัส 6730) ออกจากกลุ่มที่ 10",
+      "id": "tl-1794906409481-gkuk9",
+      "createdAt": 1794906409481
+    },
+    {
+      "studentCode": "6729",
+      "actorName": "ครูผู้สอน",
+      "groupId": 10,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6729 (รหัส 6729) ออกจากกลุ่มที่ 10",
+      "id": "tl-1794906408625-z8c6a",
+      "createdAt": 1794906408625
+    },
+    {
+      "studentCode": "6728",
+      "actorName": "ครูผู้สอน",
+      "groupId": 10,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6728 (รหัส 6728) ออกจากกลุ่มที่ 10",
+      "id": "tl-1794906407824-o1ewo",
+      "createdAt": 1794906407824
+    },
+    {
+      "studentCode": "6727",
+      "actorName": "ครูผู้สอน",
+      "groupId": 9,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6727 (รหัส 6727) ออกจากกลุ่มที่ 9",
+      "id": "tl-1794906405497-t52vk",
+      "createdAt": 1794906405497
+    },
+    {
+      "studentCode": "6726",
+      "actorName": "ครูผู้สอน",
+      "groupId": 9,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6726 (รหัส 6726) ออกจากกลุ่มที่ 9",
+      "id": "tl-1794906404609-0s43w",
+      "createdAt": 1794906404609
+    },
+    {
+      "studentCode": "6725",
+      "actorName": "ครูผู้สอน",
+      "groupId": 9,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6725 (รหัส 6725) ออกจากกลุ่มที่ 9",
+      "id": "tl-1794906403584-9e635",
+      "createdAt": 1794906403584
+    },
+    {
+      "studentCode": "6724",
+      "actorName": "ครูผู้สอน",
+      "groupId": 8,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6724 (รหัส 6724) ออกจากกลุ่มที่ 8",
+      "id": "tl-1794906401619-9skt7",
+      "createdAt": 1794906401619
+    },
+    {
+      "studentCode": "6723",
+      "actorName": "ครูผู้สอน",
+      "groupId": 8,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6723 (รหัส 6723) ออกจากกลุ่มที่ 8",
+      "id": "tl-1794906400848-885c5",
+      "createdAt": 1794906400848
+    },
+    {
+      "studentCode": "6722",
+      "actorName": "ครูผู้สอน",
+      "groupId": 8,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6722 (รหัส 6722) ออกจากกลุ่มที่ 8",
+      "id": "tl-1794906400008-e4b6x",
+      "createdAt": 1794906400008
+    },
+    {
+      "studentCode": "6721",
+      "actorName": "ครูผู้สอน",
+      "groupId": 7,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6721 (รหัส 6721) ออกจากกลุ่มที่ 7",
+      "id": "tl-1794906396896-3cvxv",
+      "createdAt": 1794906396896
+    },
+    {
+      "studentCode": "6720",
+      "actorName": "ครูผู้สอน",
+      "groupId": 7,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6720 (รหัส 6720) ออกจากกลุ่มที่ 7",
+      "id": "tl-1794906388712-wfnfi",
+      "createdAt": 1794906388712
+    },
+    {
+      "studentCode": "6719",
+      "actorName": "ครูผู้สอน",
+      "groupId": 7,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6719 (รหัส 6719) ออกจากกลุ่มที่ 7",
+      "id": "tl-1794906387577-4m96h",
+      "createdAt": 1794906387577
+    },
+    {
+      "studentCode": "6718",
+      "actorName": "ครูผู้สอน",
+      "groupId": 6,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6718 (รหัส 6718) ออกจากกลุ่มที่ 6",
+      "id": "tl-1794906385895-dxi7n",
+      "createdAt": 1794906385895
+    },
+    {
+      "studentCode": "6717",
+      "actorName": "ครูผู้สอน",
+      "groupId": 6,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6717 (รหัส 6717) ออกจากกลุ่มที่ 6",
+      "id": "tl-1794906384992-15mhf",
+      "createdAt": 1794906384992
+    },
+    {
+      "studentCode": "6716",
+      "actorName": "ครูผู้สอน",
+      "groupId": 6,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6716 (รหัส 6716) ออกจากกลุ่มที่ 6",
+      "id": "tl-1794906384067-jd4hi",
+      "createdAt": 1794906384067
+    },
+    {
+      "studentCode": "6715",
+      "actorName": "ครูผู้สอน",
+      "groupId": 5,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6715 (รหัส 6715) ออกจากกลุ่มที่ 5",
+      "id": "tl-1794906382016-dj4ad",
+      "createdAt": 1794906382016
+    },
+    {
+      "studentCode": "6714",
+      "actorName": "ครูผู้สอน",
+      "groupId": 5,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6714 (รหัส 6714) ออกจากกลุ่มที่ 5",
+      "id": "tl-1794906380831-h55gr",
+      "createdAt": 1794906380831
+    },
+    {
+      "studentCode": "6713",
+      "actorName": "ครูผู้สอน",
+      "groupId": 5,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6713 (รหัส 6713) ออกจากกลุ่มที่ 5",
+      "id": "tl-1794906379705-n2j4d",
+      "createdAt": 1794906379705
+    },
+    {
+      "studentCode": "6712",
+      "actorName": "ครูผู้สอน",
+      "groupId": 4,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6712 (รหัส 6712) ออกจากกลุ่มที่ 4",
+      "id": "tl-1794906378159-w7it2",
+      "createdAt": 1794906378159
+    },
+    {
+      "studentCode": "6711",
+      "actorName": "ครูผู้สอน",
+      "groupId": 4,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6711 (รหัส 6711) ออกจากกลุ่มที่ 4",
+      "id": "tl-1794906377129-m2ooz",
+      "createdAt": 1794906377129
+    },
+    {
+      "studentCode": "6710",
+      "actorName": "ครูผู้สอน",
+      "groupId": 4,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6710 (รหัส 6710) ออกจากกลุ่มที่ 4",
+      "id": "tl-1794906375697-pw70l",
+      "createdAt": 1794906375697
+    },
+    {
+      "studentCode": "6709",
+      "actorName": "ครูผู้สอน",
+      "groupId": 3,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6709 (รหัส 6709) ออกจากกลุ่มที่ 3",
+      "id": "tl-1794906374320-t496g",
+      "createdAt": 1794906374320
+    },
+    {
+      "studentCode": "6708",
+      "actorName": "ครูผู้สอน",
+      "groupId": 3,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6708 (รหัส 6708) ออกจากกลุ่มที่ 3",
+      "id": "tl-1794906373144-iyscg",
+      "createdAt": 1794906373144
+    },
+    {
+      "studentCode": "6707",
+      "actorName": "ครูผู้สอน",
+      "groupId": 3,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6707 (รหัส 6707) ออกจากกลุ่มที่ 3",
+      "id": "tl-1794906372112-n32zd",
+      "createdAt": 1794906372112
+    },
+    {
+      "studentCode": "6706",
+      "actorName": "ครูผู้สอน",
+      "groupId": 2,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6706 (รหัส 6706) ออกจากกลุ่มที่ 2",
+      "id": "tl-1794906370313-vfliy",
+      "createdAt": 1794906370313
+    },
+    {
+      "studentCode": "6705",
+      "actorName": "ครูผู้สอน",
+      "groupId": 2,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6705 (รหัส 6705) ออกจากกลุ่มที่ 2",
+      "id": "tl-1794906369224-oful1",
+      "createdAt": 1794906369224
+    },
+    {
+      "studentCode": "6704",
+      "actorName": "ครูผู้สอน",
+      "groupId": 2,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6704 (รหัส 6704) ออกจากกลุ่มที่ 2",
+      "id": "tl-1794906367472-7hbus",
+      "createdAt": 1794906367473
+    },
+    {
+      "studentCode": "6703",
+      "actorName": "ครูผู้สอน",
+      "groupId": 1,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6703 (รหัส 6703) ออกจากกลุ่มที่ 1",
+      "id": "tl-1794906362826-55v1t",
+      "createdAt": 1794906362826
+    },
+    {
+      "studentCode": "6702",
+      "actorName": "ครูผู้สอน",
+      "groupId": 1,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ นักเรียน 6702 (รหัส 6702) ออกจากกลุ่มที่ 1",
+      "id": "tl-1794906361312-i1uvq",
+      "createdAt": 1794906361312
+    },
+    {
+      "studentCode": "6702",
+      "actorName": "ครูผู้สอน",
+      "groupId": 1,
+      "phaseId": "step6",
+      "actionType": "บันทึกคะแนนรายบุคคล",
+      "summary": "ครูผู้สอนบันทึกคะแนนให้ นักเรียน 6702 (6702) รวม 0 คะแนน",
+      "id": "tl-1794906359912-3wadq",
+      "createdAt": 1794906359912
+    },
+    {
+      "studentCode": "6701",
+      "actorName": "ครูผู้สอน",
+      "groupId": 1,
+      "phaseId": "step6",
+      "actionType": "ลบรายชื่อนักเรียน",
+      "summary": "ครูผู้สอนลบ ต้นกล้า ม.5/1 (รหัส 6701) ออกจากกลุ่มที่ 1",
+      "id": "tl-1794906358913-koo8v",
+      "createdAt": 1794906358913
+    },
+    {
+      "studentCode": "6701",
+      "actorName": "ต้นกล้า ม.5/1",
+      "groupId": 1,
+      "phaseId": "step1",
+      "actionType": "เข้าสู่ระบบด้วยรหัส",
+      "summary": "ต้นกล้า ม.5/1 (รหัส 6701) เข้าสู่ระบบในกลุ่มที่ 1",
+      "id": "tl-1794904609023-pwdt6",
+      "createdAt": 1794904609023
+    },
+    {
+      "id": "seed-tl-1",
+      "studentCode": "TEACHER",
+      "actorName": "ระบบห้องเรียน EcoLab",
+      "groupId": 0,
+      "phaseId": "step1",
+      "actionType": "เปิดห้องเรียน",
+      "summary": "เตรียมสถานการณ์ตัวอย่างและสถานการณ์ระดับโลก 5 เรื่อง พร้อมรหัสนักเรียน 6701–6730 สำหรับ 10 กลุ่มเรียบร้อยแล้ว",
+      "createdAt": 1794904576680
+    }
+  ],
+  "teacherControls": {
+    "controlId": "classroom",
+    "announcement": "ยินดีต้อนรับนักเรียน ม.ปลาย ทุกคน! เข้าสู่ระบบด้วยรหัสนักเรียนของคุณ แล้วเริ่มกิจกรรมที่ 1 ร่วมกันได้เลย",
+    "lockedPhases": [],
+    "allowStudentScoreView": true,
+    "updatedAt": 1794904606680
+  }
+}

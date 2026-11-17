@@ -1,0 +1,137 @@
+{
+  "entities": {
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Verified teacher or administrator record authorizing Teacher Dashboard control.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "email": { "type": "string", "format": "email", "maxLength": 120 },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "displayName", "createdAt"]
+    },
+    "StudentProfile": {
+      "title": "StudentProfile",
+      "description": "Private authenticated student profile linking Google UID to a student code and group.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "studentCode": { "type": "string", "minLength": 1, "maxLength": 32, "pattern": "^[A-Za-z0-9_\\-]+$" },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "groupId": { "type": "number" },
+        "role": { "type": "string", "enum": ["student"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "studentCode", "displayName", "groupId", "role", "createdAt", "updatedAt"]
+    },
+    "ClassRosterEntry": {
+      "title": "ClassRosterEntry",
+      "description": "Shared classroom group check-in record synced across instances when a student joins a group (1-10) by name and student code.",
+      "type": "object",
+      "properties": {
+        "studentCode": { "type": "string", "minLength": 1, "maxLength": 32, "pattern": "^[A-Z0-9_\\-]+$" },
+        "studentName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "groupId": { "type": "number" },
+        "active": { "type": "boolean" },
+        "joinedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["studentCode", "studentName", "groupId", "active", "joinedAt"]
+    },
+    "StudentScoreRecord": {
+      "title": "StudentScoreRecord",
+      "description": "Teacher-managed student access code, group assignment, rubric scores, and feedback.",
+      "type": "object",
+      "properties": {
+        "studentCode": { "type": "string", "minLength": 1, "maxLength": 32, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "studentName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "groupId": { "type": "number" },
+        "linkedUid": { "type": "string", "maxLength": 128 },
+        "active": { "type": "boolean" },
+        "canvasScore": { "type": "number" },
+        "promptV1Score": { "type": "number" },
+        "peerReviewScore": { "type": "number" },
+        "promptV2Score": { "type": "number" },
+        "vercelScore": { "type": "number" },
+        "bonusScore": { "type": "number" },
+        "totalScore": { "type": "number" },
+        "teacherNote": { "type": "string", "maxLength": 500 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "studentCode",
+        "studentName",
+        "groupId",
+        "active",
+        "canvasScore",
+        "promptV1Score",
+        "peerReviewScore",
+        "promptV2Score",
+        "vercelScore",
+        "bonusScore",
+        "totalScore",
+        "teacherNote",
+        "updatedAt"
+      ]
+    },
+    "ActivityTimelineEvent": {
+      "title": "ActivityTimelineEvent",
+      "description": "Chronological student activity log entry across the 6 learning phases.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "actorUid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "studentCode": { "type": "string", "minLength": 1, "maxLength": 32 },
+        "actorName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "groupId": { "type": "number" },
+        "phaseId": { "type": "string", "enum": ["step1", "step2", "step3", "step4", "step5", "step6"] },
+        "actionType": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 400 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "actorUid", "studentCode", "actorName", "groupId", "phaseId", "actionType", "summary", "createdAt"]
+    },
+    "TeacherClassroomControl": {
+      "title": "TeacherClassroomControl",
+      "description": "Teacher-only classroom control settings including locked phases and teacher announcements.",
+      "type": "object",
+      "properties": {
+        "controlId": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "announcement": { "type": "string", "maxLength": 500 },
+        "lockedPhases": { "type": "array" },
+        "allowStudentScoreView": { "type": "boolean" },
+        "updatedByUid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["controlId", "announcement", "lockedPhases", "allowStudentScoreView", "updatedByUid", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/admins/{uid}": {
+      "schema": { "$ref": "#/entities/AdminUser" },
+      "description": "Verified teacher/admin registry."
+    },
+    "/studentProfiles/{uid}": {
+      "schema": { "$ref": "#/entities/StudentProfile" },
+      "description": "Private student profile linking Firebase Auth UID to studentCode and groupId."
+    },
+    "/classRoster/{studentCode}": {
+      "schema": { "$ref": "#/entities/ClassRosterEntry" },
+      "description": "Shared classroom roster check-in records so joined students appear immediately across all classroom sessions."
+    },
+    "/studentScores/{studentCode}": {
+      "schema": { "$ref": "#/entities/StudentScoreRecord" },
+      "description": "Student roster codes and rubric scores controlled exclusively by teachers."
+    },
+    "/activityTimeline/{eventId}": {
+      "schema": { "$ref": "#/entities/ActivityTimelineEvent" },
+      "description": "Student learning activity timeline records."
+    },
+    "/teacherControls/{controlId}": {
+      "schema": { "$ref": "#/entities/TeacherClassroomControl" },
+      "description": "Classroom phase locks and announcements controlled by teachers."
+    }
+  }
+}
